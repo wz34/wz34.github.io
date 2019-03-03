@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<title>My Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<body style="background-image: url('image1.jpeg');background-size: 100%100%">
+
+<!-- Header -->
+<header class="w3-container w3-blue-grey" id="myHeader">
+  <div class="w3-center">
+  <h1 class="w3-xxlarge w3-animate-bottom"><span style="font-family: Optima, sans-serif" >I've failed over and over and over again in my life and that is why I succeed.</span></h1>
+  </div>
+</header>
+
+<!-- Central Three Parts -->
+<div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:521px">
+
+    <!-- No.1 TO DO LIST -->
+    <div id="myDIV" class="header">
+        <h3>My To Do List</h3>
+        <input type="text" id="myInput" placeholder="I need to...">
+        <span onclick="newElement()" class="addBtn">Add</span>
+      </div>
+
+      <ul id="myUL">
+       </ul>    
+
+      <style>
+          body {
+            margin: 0;
+            min-width: 200px;
+          }
+          
+          /* Include the padding and border in an element's total width and height */
+          * {
+            box-sizing: border-box;
+          }
+          
+          /* Remove margins and padding from the list */
+          ul {
+            margin: 0;
+            padding: 0;
+          }
+          
+          /* Style the list items */
+          ul li {
+            cursor: pointer;
+            position: relative;
+            padding: 12px 8px 12px 40px;
+            list-style-type: none;
+            background: #eee;
+            font-size: 18px;
+            transition: 0.2s;
+            
+            /* make the list items unselectable */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          }
+          
+          /* Set all odd list items to a different color (zebra-stripes) */
+          ul li:nth-child(odd) {
+            background: #f9f9f9;
+          }
+          
+          /* Darker background-color on hover */
+          ul li:hover {
+            background: #ddd;
+          }
+          
+          /* When clicked on, add a background color and strike out text */
+          ul li.checked {
+            background: #888;
+            color: #fff;
+            text-decoration: line-through;
+          }
+          
+          /* Add a "checked" mark when clicked on */
+          ul li.checked::before {
+            content: '';
+            position: absolute;
+            border-color: #fff;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px;
+            left: 16px;
+            transform: rotate(45deg);
+            height: 10px;
+            width: 7px;
+          }
+          
+          /* Style the close button */
+          .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 12px 16px 12px 16px;
+          }
+          
+          .close:hover {
+            background-color: #669999;
+            color: white;
+          }
+          
+          /* Style the header */
+          .header {
+            background-color: #669999;
+            padding: 5px 15px;
+            color: white;
+            text-align: center;
+          }
+          
+          /* Clear floats after the header */
+          .header:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+          
+          /* Style the input */
+          input {
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            width: 75%;
+            padding: 10px;
+            float: left;
+            font-size: 16px;
+          }
+          
+          /* Style the "Add" button */
+          .addBtn {
+            padding: 10px;
+            width: 25%;
+            background: #d9d9d9;
+            color: #555;
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 0;
+          }
+          
+          .addBtn:hover {
+            background-color: #bbb;
+          }
+          </style> 
+
+  </div>  
+
+</div>
+
+<!-- No.2 Dinning -->
+<div class="w3-third">
+    <div class="w3-card w3-container" style="min-height:500px">
+
+       <div style="width:540px;height:472px;overflow:hidden;border:0px" align="center"> 
+          <div style="width:600px;height:472px;margin:-585px 0px 0px -25px;">
+                  <iframe width="540" height="1275" scrolling="no" src="http://dining.rice.edu/"></iframe>
+          </div> 
+      </div>
+
+      </div>      
+    </div>
+  
+
+  
+  <!-- No.3 Events -->
+  <div class="w3-third">
+    <div class="w3-card w3-container" style="min-height:521px">
+   <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=460&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=wendyzhang200322%40yahoo.com&amp;color=%231B887A&amp;src=addressbook%23contacts%40group.v.calendar.google.com&amp;color=%2328754E&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;src=jonesevp%40gmail.com&amp;color=%23875509&amp;src=riceprogramcouncil%40gmail.com&amp;color=%2329527A&amp;src=rice.edu_90aprbs5m5el9odenh43sff5hc%40group.calendar.google.com&amp;color=%2342104A&amp;ctz=America%2FChicago" style="border-width:0" width="450" height="460" frameborder="0" scrolling="no"></iframe>
+      </div>
+  
+  </div>
+
+<!-- Time -->
+<hr>
+<div class="w3-border">
+<div class="w3-bar w3-blue-grey">
+  <button class="w3-bar-item w3-button testbtn w3-padding-16  w3-blue-grey" onclick="openCity(event,'Fondren')">Fondren</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16  w3-blue-grey" onclick="openCity(event,'Rec')">Recreation Center</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16 w3-blue-grey" onclick="openCity(event,'Coffee House')">Coffee House</button>
+</div>
+
+<div id="Fondren" class="w3-container city w3-animate-opacity">
+</style>
+<table BORDER=0.75 bgcolor="CadetBlue">
+  <tr>
+    <caption>
+      <h4 style="color:White;">Fondren Library Open Time:</h4>
+    </caption>
+    <th><h6 style="color:White;">SUN</h6></th>
+    <th><h6 style="color:White;">MON</h6></th>
+    <th><h6 style="color:White;">TUE</h6></th>
+    <th><h6 style="color:White;">WED</h6></th>
+    <th><h6 style="color:White;">THU</h6></th>
+    <th><h6 style="color:White;">FRI</h6></th>
+    <th><h6 style="color:White;">SUN</h6></th>
+  </tr>
+  <tr>
+    <td><h6 style="color:White;">Open at 12noon</h6></td>
+    <td><h6 style="color:White;">24 hours</h6></td>
+    <td><h6 style="color:White;">24 hours</h6></td>
+    <td><h6 style="color:White;">24 hours</h6></td>
+    <td><h6 style="color:White;">24 hours</h6></td>
+    <td><h6 style="color:White;">Close at 10pm</h6></td>
+    <td><h6 style="color:White;">9pm to 7pm</h6></td>
+  </tr>
+</table>
+</div>
+
+<div id="Rec" class="w3-container city w3-animate-opacity">
+<table BORDER=0.75 bgcolor="CadetBlue">
+  <tr>
+    <caption>
+      <h4 style="color:White;">Recreational Center Open Time:</h4>
+    </caption>
+    <th><h6 style="color:White;">SUN</h6></th>
+    <th><h6 style="color:White;">MON</h6></th>
+    <th><h6 style="color:White;">TUE</h6></th>
+    <th><h6 style="color:White;">WED</h6></th>
+    <th><h6 style="color:White;">THU</h6></th>
+    <th><h6 style="color:White;">FRI</h6></th>
+    <th><h6 style="color:White;">SUN</h6></th>
+  </tr>
+  <tr>
+    <td><h6 style="color:White;"> 10am - 10pm</h6></td>
+    <td><h6 style="color:White;"> 6am - 12am</h6></td>
+    <td><h6 style="color:White;"> 6am - 12am</h6></td>
+    <td><h6 style="color:White;"> 6am - 12am</h6></td>
+    <td><h6 style="color:White;"> 6am - 12am</h6></td>
+    <td><h6 style="color:White;"> 6am - 10pm</h6></td>
+    <td><h6 style="color:White;"> 8am - 10pm</h6></td>
+  </tr>
+</table>
+</div>
+
+<div id="Coffee House" class="w3-container city w3-animate-opacity">
+<table BORDER=0.75 bgcolor="CadetBlue">
+  <tr>
+    <caption>
+        <h4 style="color:White;">Coffe House Open Time:</h4>
+    </caption>
+    <th><h6 style="color:White;">SUN</h6></th>
+    <th><h6 style="color:White;">MON</h6></th>
+    <th><h6 style="color:White;">TUE</h6></th>
+    <th><h6 style="color:White;">WED</h6></th>
+    <th><h6 style="color:White;">THU</h6></th>
+    <th><h6 style="color:White;">FRI</h6></th>
+    <th><h6 style="color:White;">SUN</h6></th>
+  </tr>
+  <tr>
+    <td><h6 style="color:White;"> 2pm - 1am</h6></td>
+    <td><h6 style="color:White;"> 7:30am - 1am</h6></td>
+    <td><h6 style="color:White;"> 7:30am - 1am</h6></td>
+    <td><h6 style="color:White;"> 7:30am - 1am</h6></td>
+    <td><h6 style="color:White;"> 7:30am - 1am</h6></td>
+    <td><h6 style="color:White;"> 7:30am - 5pm</h6></td>
+    <td><h6 style="color:White;"> 10am - 5pm</h6></td>
+  </tr>
+</table>
+</div>
+<script>
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+    activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+    
+// Create a "close" button and append it to each list item
+  var myNodelist = document.getElementsByTagName("LI");
+  var i;
+  for (i = 0; i < myNodelist.length; i++) {
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
+  }
+  
+  // Click on a close button to hide the current list item
+  var close = document.getElementsByClassName("close");
+  var i;
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+  
+  // Add a "checked" symbol when clicking on a list item
+  var list = document.querySelector('ul');
+  list.addEventListener('click', function(ev) {
+    if (ev.target.tagName === 'LI') {
+      ev.target.classList.toggle('checked');
+    }
+  }, false);
+  
+  // Create a new list item when clicking on the "Add" button
+  function newElement() {
+    var li = document.createElement("li");
+    var inputValue = document.getElementById("myInput").value;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+      alert("You must write something!");
+    } else {
+      document.getElementById("myUL").appendChild(li);
+    }
+    document.getElementById("myInput").value = "";
+  
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+  
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+  }
+</script>
